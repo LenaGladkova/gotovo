@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Shop</title>
+<style>
+    @media(max-width: 900px){
+      body{
+    background-color: rgb(175, 115, 253);
+}
+.towar1, .towar2, .towar3, .towar4, .towar5, .towar6,.towar7,.towar8,.towar9, .towar10{
+background-color:  rgb(226, 183, 255);
+width: 250px;
+height: 300px;
+margin: 10px 10px 10px 10px;
+display: inline-block;
+border: 2px solid #c445ff; 
+border-radius: 5px; 
+box-shadow: 0px 0px 5px 2px #c445ff; 
+}
+img{
+width: 150px;
+height: 150px;
+margin: 10px;
+}
+h2{
+    
+margin: -10px 10px 10px 10px;
+color: black;
+
+
+}
+
+h3, h4, h5, h6, h1{
+margin: -30px 10px 10px 10px;
+cursor: pointer; 
+font-size: 30px;
+}
+#h{
+font-size: 45px;
+margin: 10px;
+color: rgb(255, 255, 255);
+}
+#hh{
+    text-align: end;
+    margin: -100px 0 30px 0;
+}
+a{
+    text-decoration: none !important;
+}
+#hhh{
+    margin: -100px 0 30px 1270px;
+    color:white;
+}
+
+h3:hover, h4:hover, h5:hover, h6:hover, h1:hover{
+    color: rgb(132, 0, 255);
+}}
+
+@media(max-width: 900px){
+    body{
+    background-color:rgb(175, 115, 253);
+ 
+}
+.towar1, .towar2, .towar3, .towar4, .towar5, .towar6,.towar7,.towar8,.towar9, .towar10{
+background-color:  rgb(226, 183, 255);
+width: 300px;
+height: auto;
+margin: 10px 10px 10px 10px;
+display: inline-block;
+border: 2px solid #c445ff; 
+border-radius: 5px; 
+box-shadow: 0px 0px 5px 2px #c445ff; 
+}
+img{
+width: 100px;
+height: 100px;
+margin: 10px;
+}
+h2{
+    
+margin: -10px 10px 10px 10px;
+color: black;
+
+
+}
+
+h3, h4, h5, h6, h1{
+margin: -30px 10px 10px 10px;
+cursor: pointer; 
+font-size: 30px;
+}
+#h{
+font-size: 45px;
+margin: 10px;
+color: rgb(255, 255, 255);
+}
+#hh{
+    text-align: end;
+    margin: -100px 0 30px 0;
+}
+a{
+    text-decoration: none !important;
+}
+#hhh{
+    margin: -100px 0px 30px 640px;
+    color:white;
+}
+
+h3:hover, h4:hover, h5:hover, h6:hover, h1:hover{
+    color: rgb(132, 0, 255);
+}}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+
+    var cartItems = localStorage.getItem("cartItems") ? localStorage.getItem("cartItems").split(",") : [];
+
+
+    function addItemToCart(item) {
+        cartItems.push(item);
+ 
+        localStorage.setItem("cartItems", cartItems.join(","));
+    }
+
+    function updateCart() {
+        $("#koshik").empty();
+     
+        cartItems.forEach(function(item) {
+            $("#koshik").append("<li>" + item + " ✔️</li>");
+        });
+    }
+
+   
+    $("h3, h4, h5, h6, h1").click(function(){
+       
+        var item = $(this).siblings("a").text().trim(); 
+
+        addItemToCart(item);
+
+        updateCart();
+    });
+});
+</script>
+</head>
+</head>
+<body>
+    <h2 id="h">Магазин⚡ </h2> 
+    <a href="Golovna.html" ><h2 id="hhh">Меню /</h2></a>
+    <a href="koshik1.html"><h2 id="hh">🛒</h2></a>
+    <div id="towary">
+        <div class="towar1"> 
+          <img src="chasyp.jpg" alt=""><a href="chasy1.html"><h2>Часи 700грн</h2></a><h3>До кошика</h3> 
+        </div>
+        <div class="towar2"> 
+            <img src="kuklap.jpg" alt=""><a href="kukla1.html"><h2>Лялька 200грн</h2></a><h4>До кошика</h4> 
+        </div>
+        <div class="towar3"> 
+            <img src="chashkap.jpg" alt=""><a href="chashka1.html"><h2>Чашка 150грн</h2></a><h5>До кошика</h5> 
+        </div> 
+        <div class="towar4"> 
+            <img src="posterp.jpg" alt=""><a href="poster1.html"><h2>Постер 150грн</h2></a><h6>До кошика</h6> 
+        </div>
+        <div class="towar5"> 
+            <img src="kartinap.jpg" alt=""><a href="kartina1.html"><h2>Картина  600грн</h2></a><h1>До кошика</h1> 
+        </div>
+        <div class="towar6"> 
+            <img src="medalon.jpg" alt=""><a href="kulonp1.html"><h2>Медальон 2100грн</h2></a><h3>До кошика</h3> 
+          </div>
+          <div class="towar7"> 
+            <img src="kartyp.jpg" alt=""><a href="kartyp1.html"><h2>Карти 100грн</h2></a><h3>До кошика</h3> 
+          </div>
+          <div class="towar8"> 
+            <img src="futbp.jpg" alt=""><a href="futb1.html"><h2>Футболка 700грн</h2></a><h3>До кошика</h3> 
+          </div>
+          <div class="towar9"> 
+            <img src="dekorp.jpg" alt=""><a href="dekorp1.html"><h2>Декор 2400грн</h2></a><h3>До кошика</h3> 
+          </div>
+          <div class="towar10"> 
+            <img src="palatkapirat.jpg" alt=""><a href="palatka1.html"><h2>Намети 5200грн</h2></a><h3>До кошика</h3> 
+          </div>
+    </div>
+</body>
+</html>
